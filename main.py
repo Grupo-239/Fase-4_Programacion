@@ -7,7 +7,7 @@ from reserva import Reserva
 
 def ejecutar_bateria_pruebas():
     """
-    Simulación automatizada de 10 operaciones para validar la lógica de negocio,
+    Simulación automatizada de 10 operaciones para validar la lógica,
     el polimorfismo y el manejo de excepciones del sistema Software FJ.
     """
     print("="*60)
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     sys.dont_write_bytecode = True
 
     # Inicializar logs
-    logs.registrar_evento("Arranque del sistema para evaluación académica.")
+    logs.registrar_evento("Arranque del sistema")
 
     # Ejecutar las 10 operaciones en consola
     ejecutar_bateria_pruebas()
