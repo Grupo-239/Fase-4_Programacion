@@ -6,9 +6,9 @@ from servicio import ReservaSala, AlquilerEquipo, Asesoria
 from reserva import Reserva
 from logs import registrar_error, registrar_evento
 
-# -------------------------
+
 # VARIABLES GLOBALES DEL SISTEMA
-# -------------------------
+
 
 # Instancia principal que gestiona todos los clientes
 sistema = SistemaClientes()
@@ -23,9 +23,9 @@ reservas = []
 lista_reservas = None
 
 
-# -------------------------
+
 # CLIENTES (REGISTRO Y SESIÓN)
-# -------------------------
+
 
 def registrar():
     """
@@ -84,9 +84,9 @@ def logout():
         salida.insert(tk.END, "No hay sesión activa\n")
 
 
-# -------------------------
+
 # SERVICIOS Y RESERVAS
-# -------------------------
+
 
 def crear_reserva():
     """
@@ -187,9 +187,9 @@ def cancelar_reserva():
         salida.insert(tk.END, f"Error: {e}\n")
 
 
-# -------------------------
+
 # ACTUALIZACIÓN DE INTERFAZ (LISTA DE RESERVAS)
-# -------------------------
+
 
 def actualizar_lista():
     """
@@ -220,9 +220,8 @@ def actualizar_lista():
             lista_reservas.insert(tk.END, texto)
 
 
-# -------------------------
 # INTERFAZ GRÁFICA (GUI)
-# -------------------------
+
 
 def iniciar_app():
     """
