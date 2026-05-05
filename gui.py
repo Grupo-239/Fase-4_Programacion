@@ -97,19 +97,18 @@ def crear_reserva():
         if not usuario_actual:
             raise Exception("Debe iniciar sesión")
 
-        tipo = servicio_var.get()  # tipo seleccionado en la GUI
+        tipo = servicio_var.get()
 
         # --- RESERVA DE SALA ---
         if tipo == "Sala":
-            horas = int(e_horas.get())
+            horas = e_horas.get()  # ← SIN int()
             servicio = ReservaSala(horas, 50)
 
         # --- ALQUILER DE EQUIPOS ---
         elif tipo == "Equipo":
-            dias = int(e_dias.get())
+            dias = e_dias.get()  # ← SIN int()
             tipo_equipo = equipo_var.get()
 
-            # Precios según tipo de equipo
             precios = {
                 "Laptop": 100,
                 "Tablet": 70,
@@ -120,18 +119,15 @@ def crear_reserva():
 
         # --- ASESORÍA ---
         else:
-            horas = int(e_horas.get())
+            horas = e_horas.get()  # ← SIN int()
             servicio = Asesoria(horas, 120)
 
-        # Crear objeto reserva (relación Cliente + Servicio)
+        # Crear reserva
         r = Reserva(usuario_actual, servicio)
-
-        # Guardar en lista general
         reservas.append(r)
 
         salida.insert(tk.END, f"Reserva creada: {r} | Costo: {r.costo()}\n")
 
-        # Actualizar vista
         actualizar_lista()
 
     except Exception as e:
