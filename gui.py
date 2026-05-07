@@ -1,6 +1,4 @@
-import tkinter as tk  # Librería para la interfaz gráfica (GUI)
-
-# Importación de módulos del sistema (arquitectura modular)
+import tkinter as tk 
 from cliente import SistemaClientes
 from servicio import ReservaSala, AlquilerEquipo, Asesoria
 from reserva import Reserva
@@ -220,10 +218,7 @@ def actualizar_lista():
 
 
 def iniciar_app():
-    """
-    Construye toda la interfaz gráfica del sistema.
-    Define inputs, botones y componentes visuales.
-    """
+
     global e_nombre, e_cedula, e_correo, salida
     global e_horas, e_dias, servicio_var, equipo_var
     global lista_reservas
